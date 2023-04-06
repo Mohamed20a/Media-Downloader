@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+	<title>Download Video</title>
+</head>
+<body>
+	<h1>Download Video</h1>
+	<input type="text" id="videoUrl" placeholder="Enter video URL">
+	<button id="downloadButton">Download</button>
+	<p id="errorMsg" style="display:none;color:red;"></p>
+	<div id="videoLinks"></div>
+
+	<script>
+		const videoUrlInput = document.getElementById('videoUrl');
+		const downloadButton = document.getElementById('downloadButton');
+		const errorMsg = document.getElementById('errorMsg');
+		const videoLinks = document.getElementById('videoLinks');
+
+		const showLoader = () => {
+			downloadButton.disabled = true;
+			downloadButton.textContent = "Downloading...";
+		};
+
+		const hideLoader = () => {
+			downloadButton.disabled = false;
+			downloadButton.textContent = "Download";
+		};
+
+		const showErrorMsg = (message) => {
+			errorMsg.textContent = message;
+			errorMsg.style.display = "block";
+			errorMsg.addEventListener("animationend", () => (errorMsg.style.display = "none"));
+		};
+
+		const showVideoLinks = (links) => {
+			videoLinks.innerHTML = "";
+			const linksHtml = links.map(link => `
+				<div>
+					<a href="${link.url}" download="${link.fileName}">${link.fileName}</a>
+				</div>
+			`).join('');
+			videoLinks.innerHTML = `
+				<h2>Download Links:</h2>
+				${linksHtml}
+			`;
+		};
+
+		const handleDownloadClick = async () => {
+			const videoUrl = videoUrlInput.value.trim();
+			if (!videoUrl) {
+				showErrorMsg("Please enter a video URL");
+				return;
+			}
+			showLoader();
+			try {
+				const response = await fetch(`https://your-video-downloader-api.com/download?videoUrl=${encodeURIComponent(videoUrl)}`);
+				if (!response.ok) {
+					showErrorMsg("An error occurred, please try again later");
+					return;
+				}
+				const data = await response.json();
+				if (!data || !data.links) {
+					showErrorMsg("An error occurred, please try again later");
+					return;
+				}
+				showVideoLinks(data.links);
+			} catch (err) {
+				showErrorMsg("An error occurred, please try again later");
+			} finally {
+				hideLoader();
+			}
+		};
+
+		downloadButton.addEventListener("click", handleDownloadClick);
+	</script>
+</body>
+</html>

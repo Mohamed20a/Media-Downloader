@@ -1,0 +1,230 @@
+/* Set a background image for the whole page */
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(https://img.freepik.com/free-vector/abstract-background-design-with-stars-gray_53876-64036.jpg?w=740&t=st=1679234386~exp=1679234986~hmac=4d3d7fa62c07a05729c4d27142d2023eba088b39e9fda5205972a838c87f8a00);
+}
+/*Navigation bar */
+.navbar {
+    background: #e0e0e0;
+    color: black;
+    padding: 1.5em 0;
+    box-shadow: 0 3.5px 38px 3.5px #5e5e5e3d;
+}
+.navbar .navbar-brand{
+    color: #1c1460;
+    font-size: 2em;
+    font-family: 'elmessiri-bold';
+}
+.navbar a:hover{
+    color: #09033b;
+}
+.navbar .nav-link{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 21px;
+    height: 37px;
+    margin-right: 10px;
+    position: relative;
+}
+.navbar .nav-link::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  margin-top: 1em;
+  background-color: #145070;
+  bottom: -2px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+.navbar .nav-link:hover::before{
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.title{
+    text-align: center;
+    margin: 5em 0 5em 0;
+}
+.py-20{
+    padding: 10em 0 18em 0;
+    background: #fff;
+}
+/* Scroll Down */
+.scroll-down{
+    text-align: -webkit-center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #1c1460;
+}
+.scrolldown {
+    --color: #054660 !important;
+    --sizeX: 30px;
+    --sizeY: 50px;
+    position: relative;
+    width: var(--sizeX);
+    height: var(--sizeY);
+    margin-left: var(sizeX / 2);
+    border: calc(var(--sizeX) / 10) solid var(--color);
+    border-radius: 50px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    cursor: pointer;
+  }
+  .scrolldown::before {
+    content: "";
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: var(--color);
+    border-radius: 100%;
+    animation: scrolldown-anim 2s infinite;
+    box-sizing: border-box;
+    box-shadow: 0px -5px 3px 1px #2a547066;
+  }
+  @keyframes scrolldown-anim {
+    0% {
+      opacity: 0;
+      height: 6px;
+    }
+    40% {
+      opacity: 1;
+      height: 10px;
+    }
+    80% {
+      transform: translate(0, 20px);
+      height: 10px;
+      opacity: 0;
+    }
+    100% {
+      height: 3px;
+      opacity: 0;
+    }
+  }
+  .chevrons {
+    padding: 6px 0 0 0;
+    margin-left: -3px;
+    margin-top: 48px;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .chevrondown {
+    margin-top: -6px;
+    position: relative;
+    border: solid var(--color);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+  }
+  .chevrondown:nth-child(odd) {
+    animation: pulse54012 500ms ease infinite alternate;
+  }
+  .chevrondown:nth-child(even) {
+    animation: pulse54012 500ms ease infinite alternate 250ms;
+  }
+  @keyframes pulse54012 {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.5;
+    }
+  }
+  /* Section Card */
+.islamic-card{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 4em;
+}
+.title{
+  text-align: right;
+  font-family:  'rabar';
+  font-weight: 600;
+}
+/* Card Downloader Page */
+#card{
+    box-shadow: 0 0 5px rgb(0,0,0,0.5);
+}
+#card:hover{
+    transform: scale(0.95);
+    transition: .5s all
+}
+/* Footer */
+.footer-basic {
+  padding: 3em 0;
+  background-color:#ffffff;
+  color:#4b4c4d;
+}
+.footer-basic .social {
+  text-align:center;
+  padding-bottom: 27px;
+}
+.footer-basic .social > a {
+  font-size: 24px;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+  opacity: 0.75;
+}
+.footer-basic .social > a:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  transition: .5s;
+}
+.footer-basic .copyright {
+  text-align:center;
+  font-size:15px;
+  color:#787878;
+  margin-bottom:0;
+}
+.copyright:hover{
+  font-size: 16px;
+  color: #3b3b3b;
+  transition: .3s all ease-in-out;
+}
+
+@media (max-width: 992px){
+    .navbar .navbar-nav{
+      padding-top: 10px;
+    }
+    .navbar .nav-link{
+        color: #052050;
+        padding: 19px 10px;
+        font-size: 18px;
+        position: relative;
+    }
+    .navbar .nav-link::before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      border-radius: 4px;
+      margin-top: 1em;
+      background-color: #04273a;
+      bottom: -10px;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform .3s ease-in-out;
+    }
+    .LinksDad h1{
+      padding: 0 1em;
+    }
+}

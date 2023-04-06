@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../logo/MAG_big-png.png" type="image/x-icon">
+    <!-- Style css -->
+    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- <link rel="stylesheet" href="./css/media query.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7044289548334510" crossorigin="anonymous"></script>
+    <title>YouTube Downloader</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a href="../index.html"><img src="../logo/MAG_big-png.png" alt="" onclick="location.reload()" style="width: 9em;"></a>
+            <button class="navbar-toggler" style="border: 0; color: transparent;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <label class="hamburger">
+                    <input type="checkbox">
+                    <svg viewBox="0 0 32 32">
+                        <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                        <path class="line" d="M7 16 27 16"></path>
+                    </svg>
+                </label>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNavDropdown" style="direction: rtl; text-align: end;">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./face.html">Facebook Downloader</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./insta.html">Instagram Downloader</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./twitter.html">Twitter Downloader</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+        <!--make input field for the youtube video link-->
+            <header>
+                <h2 class="youtube animate__animated animate__bounceInLeft" onclick="location.reload()" style="color: #e00618">YouTube Downloader </h2></button><br>
+                <h3>Convert and download</h3>
+                <h4>any <span class="youtube">YouTube</span> video in MP4, MP3 and opus</h4>
+            </header>
+            
+            <div id="main">
+                <div id="flip-container">
+                    <input type="text" id="url" class="linkOfVideo" name="text" placeholder="Past a video URL" autocomplete="off"><br>
+                    <button id="short" class="download youtube-btn" >Download <i class="fa-solid fa-circle-down"></i></button>
+                    <button id="delete" class="remove bg-danger">
+                        <span class="text">Delete</span><span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <h5 id="error-message"></h5>
+            
+            <!-- <div class="spinner" id="loader"></div> -->
+
+            <div class="wrapper" id="loader">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="shadow"></div>
+                <div class="shadow"></div>
+                <div class="shadow"></div>
+            </div>
+        
+            <!-- <div class="dot-spinner" id="loader">
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+            </div> -->
+        
+        
+        
+            <div class="LinksDad">
+                
+            </div>
+
+
+            
+
+
+            <script src="../js/youtube.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+</body>
+</html>

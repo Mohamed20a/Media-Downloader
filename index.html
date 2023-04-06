@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Icon  -->
+    <link rel="shortcut icon" href="./logo/MAG_big-png.png" type="image/x-icon">
+    <!-- Animation css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Text -->
+    <link rel="stylesheet" type="text/css" href="https://www.fontstatic.com/f=elmessiri-bold,arwa,milano,mirza-medium,lemonada" />
+    <!-- Style css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/page.css">
+    <!-- Title -->
+    <title>MAG</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand" href="#" onclick="location.reload()"> < MAG /> </a> -->
+            <!-- Navbar Brand -->
+            <img src="./logo/MAG_big-png.png" alt="" onclick="location.reload()" style="width: 9em;">
+            <button class="navbar-toggler" style="border: 0; color: transparent;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <label class="hamburger">
+                    <input type="checkbox">
+                    <svg viewBox="0 0 32 32">
+                        <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                        <path class="line" d="M7 16 27 16"></path>
+                    </svg>
+                </label>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown" style="direction: rtl; text-align: end;">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./page/twitter.html">Twitter Downloader</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./page/insta.html">Instagram Downloader</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./page/face.html">Facebook Downloader</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./page/youtube.html">YouTube Downloader</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Title of Page -->
+    <section class="title" style="text-align: center;">
+        <div class="container">
+            <div class="img">
+                <img class="animate__animated animate__backInLeft" src="./logo/MAG_big-png.png" alt="" style="width: 11em; margin-top: 9em;" >
+            </div> <br>
+            <div class="animate__animated animate__headShake" style="margin-bottom: 14em;">
+                <h2 style="color: #22226a; font-family: lemonada;">Media Downloader</h2>
+                <p>Fast and free all in one video downloader <br> By <span style="font-size: 17px; font-weight: 600; color: #22226a;">URL <i class="fa-solid fa-link"></i></span></p>
+            </div>
+            <!-- Scroll Down Button -->
+            <a href="#page" class="scroll-down">
+                <div class="scrolldown" style="--color: skyblue">
+                        <div class="chevrons">
+                            <div class="chevrondown"></div>
+                            <div class="chevrondown"></div>
+                        </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Downloader Cards -->
+    <section class="py-20">
+        <div class="container">
+            <div class="max-w-3xl mx-auto mb-16 text-center ">
+                <h2 class="mt-8 mb-10">Supports The Most Popular Sources</h2>
+                <p class="lead text-muted">You can check regularly updated supported sources list.</p>
+            </div>
+            <br><br>
+            <div class="row justify-content-center" data-aos="zoom-in">
+                <!-- Youtube Card -->
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 p-3"  >
+                    <div class="bg-light rounded py-4 text-center" id="card">
+                        <a href="./page/youtube.html" class="text-decoration-none text-dark">
+                            <img class="d-block mx-auto lazy" style="margin-bottom: .7em; width: 4em; height: 4em;"  src="./logo/youtube1.webp" alt="YouTube video downloader" title="YouTube">
+                            <span style="font-size: 20px; font-family: 'elmessiri-bold';">YouTube</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Facebook Card -->
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 p-3" >
+                    <div class="bg-light rounded py-4 text-center" id="card">
+                        <a href="./page/face.html" class="text-decoration-none text-dark">
+                            <img class="d-block mx-auto lazy" style="margin-bottom: .7em; width: 4em; height: 4em; border-radius: 10px;"  src="./logo/face.webp" alt="Facebook video downloader" title="Facebook">
+                            <span style="font-size: 20px; font-family: 'elmessiri-bold';">Facebook</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Instagram Card -->
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 p-3" >
+                    <div class="bg-light rounded py-4 text-center" id="card">
+                        <a href="./page/insta.html" class="text-decoration-none text-dark">
+                            <img class="d-block mx-auto lazy" style="margin-bottom: .7em; width: 4em; height: 4em; border-radius: 10px;"  src="./logo/insta.png" alt="Instagram video downloader" title="Instagram">
+                            <span style="font-size: 20px; font-family: 'elmessiri-bold';">Instagram</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Twitter Card -->
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 p-3" >
+                    <div class="bg-light rounded py-4 text-center" id="card">
+                        <a href="./page/twitter.html" class="text-decoration-none text-dark">
+                            <img class="d-block mx-auto lazy" style="margin-bottom: .7em; width: 4em; height: 4em; border-radius: 10px;" src="./logo/twitter1.png" alt="Twitter video downloader" title="Twitter">
+                            <span style="font-size: 20px; font-family: 'elmessiri-bold';">Twitter</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section Card -->
+    <section style="padding: 5em 0;" id="page">
+        <div class="container">
+            <div class="max-w-3xl mx-auto mb-16 text-center ">
+                <h2 class="mt-8 mb-10">How to download videos ?</h2>
+                <p class="lead text-muted">To download videos, you have to follow three easy steps :</p>
+            </div>
+            <br> <br>    
+            
+            <div class="islamic-card" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine">
+                    <!-- Copy Card -->
+                    <div class="cards akeda mb-5">
+                            <img class="cards-img mb-3" alt="" src="./logo/copy-url.webp">
+                            <div class="desc" style="width: 15em; text-align: center;">
+                                <h5>
+                                <div class="why-title ">
+                                    <span class="flex-shrink-0 align-items-center justify-content-center rounded-circle" style="width: 36px; height: 36px; display: inline-flex; background: #fafafa;">1</span>
+                                    Copy Link
+                                </div>
+                                </h5>
+                                <p>Just copy link of source which you want to download.</p>
+                            </div>
+                    </div>    
+                    <!-- Past card -->
+                    <div class="cards feka mb-5" >
+                            <img class="cards-img mb-3" alt="" src="./logo/choose-format.webp">
+                            <div class="desc" style="width: 15em; text-align: center;">
+                                <h5>
+                                <div class="why-title">
+                                    <span class="flex-shrink-0 align-items-center justify-content-center rounded-circle" style="width: 36px; height: 36px; display: inline-flex; background: #fafafa;">2</span>
+                                    Paste Link
+                                </div>
+                                </h5>
+                                <p>Paste a video link of supported sources into the input field above.</p>
+                            </div>
+                    </div>    
+                    <!-- Download card -->
+                    <div class="cards sera mb-5" >
+                            <img class="cards-img mb-3" alt="" src="./logo/get-file.webp">
+                            <div class="desc" style="width: 15em; text-align: center;">
+                                <h5>
+                                <div class="why-title">
+                                    <span class="flex-shrink-0 align-items-center justify-content-center rounded-circle" style="width: 36px; height: 36px; display: inline-flex; background: #fafafa;">3</span>
+                                    Download Now!
+                                </div>
+                                </h5>
+                                <p>Click to download button and see files which is available to download.</p>
+                            </div>
+                    </div>    
+            </div>
+            <a href="https://drive.google.com/file/d/1kkClSdZOneuLggoSFdWy-sa3chxwqZYF/view?usp=sharing" target="_blank" style="display: flex; justify-content: space-around; text-decoration: none;"><button style="padding: 10px;" type="button" class="btn btn-success">Download QR <i class="fa-solid fa-qrcode"></i></button></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer-basic">
+        <footer>
+            <div class="social">
+                <a target="_blank" style="background-color: #ac2bac; color: #fff;" href="https://www.instagram.com/m_ahmeeeed/"><i class="fa-brands fa-instagram"></i></a>
+                <a target="_blank" style="background-color: #0082ca; color: #fff;" href="https://www.linkedin.com/in/mohamed-ahmed-bb358b239/"><i class="fa-brands fa-linkedin"></i></a>
+                <a target="_blank" style="background-color: #55acee; color: #fff;" href="https://twitter.com/M0hamed_ahmed20"><i class="fa-brands fa-twitter"></i></a>
+                <a target="_blank" style="background-color: #333333; color: #fff;" href="https://github.com/Mohamed20a"><i class="fa-brands fa-github"></i></a>
+                <a target="_blank" style="background-color: #0e40bd; color: #fff;" href="https://www.facebook.com/profile.php?id=100006434713527"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <a href="https://portfolioo-1.netlify.app/" target="_blank" style="text-decoration: none;"> <p class="copyright"> Mohamed Ahmed Elgeady ❤</p> </a>
+        </footer>
+    </div>
+
+    <!-- Bootstrap css -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- Fontawesome Icons -->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>
