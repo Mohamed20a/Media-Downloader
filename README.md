@@ -1,6 +1,9 @@
 # MAG Downloader
-
+## English Language
 <img align="center" width="80%" src="https://github.com/Mohamed20a/Media-Downloader/blob/main/logo/down.png">
+<br>
+## Arabic Language
+<img align="center" width="80%" src="https://github.com/Mohamed20a/Media-Downloader/blob/main/logo/down2.png">
 
 ## What is MAG Downloader?
  Media Downloader
