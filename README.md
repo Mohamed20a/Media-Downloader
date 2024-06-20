@@ -4,7 +4,7 @@
 
 ## What is MAG Downloader?
  Media Downloader
- A MAG downloader is a site that can download videos, audios, and images from the four popular platforms {Facebook, Youtube, Instagram, Twitter} of different quality.
+ A MAG downloader is a Site that can Download any video from Facebook, YouTube, Instagram, and Twitter (X), and it is also available to download in video or audio format from YouTube and images from Instagram. It can also work as an app that you can download from the website, and all of this will be in Arabic and English.
 
 ## 🚀 About Me
 I'm Mohamed Ahmed Frontend web developer...
