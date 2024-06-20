@@ -1,3 +1,13 @@
+
+************* Manifest Json file to convert Website to Mobile and Desktop Application **************
+********** In these videos, I explained what PWA and Manifest json file are, how to run it as an Application, and how it works Offline? ***********
+
+Videos in Youtube :------>>> https://youtube.com/playlist?list=PLSonS891oiVmOngaJqLeTjgyaDY6u-0o3&si=ZpnEK7Tl0Xdfk-pC
+
+------------------------------------------------------------------------------------------------
+
+
+
 {
   "name":"MAG Downloader",
   "short_name":"MAG Downloader",
