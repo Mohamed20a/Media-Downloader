@@ -5,14 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="shortcut icon" href="../logo/MAG_big-png.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <!-- Icon  -->
+    <link rel="shortcut icon" href="../logo/icon.png" type="image/x-icon">
+    <!-- Manifest -->
+    <link rel="manifest" href="../manifest.json">
+    <!-- IOS Support -->
+    <link rel="apple-touch-icon" href="../images/icons/icon-72x72.png">
+    <link rel="apple-touch-icon" href="../images/icons/icon-96x96.png">
+    <link rel="apple-touch-icon" href="../images/icons/icon-128x128.png">
+    <link rel="apple-touch-icon" href="../images/icons/icon-144x144.png">
+    <link rel="apple-touch-icon" href="../images/icons/icon-152x152.png">
+    <link rel="apple-touch-icon" href="../images/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" href="../images/icons/icon-512x512.png">
     <!-- Style css -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/page.css">
-    <!-- <link rel="stylesheet" href="./css/media query.css"> -->
+    <!-- Animation css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7044289548334510" crossorigin="anonymous"></script>
+    <!-- Title -->
     <title>Facebook Downloader</title>
 </head>
 <body>
@@ -20,7 +33,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
-            <a href="../index.html"><img src="../logo/MAG_big-png.png" alt="" onclick="location.reload()" style="width: 9em;"></a>
+            <a href="../index.html"><img src="../logo/logo.png" alt="" onclick="location.reload()" style="width: 10em; margin-right: 10px;"></a>
             <button class="navbar-toggler" style="border: 0; color: transparent;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <label class="hamburger">
                     <input type="checkbox">
@@ -30,62 +43,108 @@
                     </svg>
                 </label>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown" style="direction: rtl; text-align: end;">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
+
+                    <div>
+                        <div class="dropdown-list" >
+                            <button id="englishText" class="language-button" onclick="changeLanguage('en')">
+                                <img width="28" height="28" src="https://img.icons8.com/color/48/great-britain-circular.png" alt="great-britain-circular"/>
+                                <span>EN</span>
+                            </button>
+                        </div>
+
+                        <div class="dropdown-list" >
+                            <button id="arabicText" class="language-button" onclick="changeLanguage('ar')">
+                                <img width="28" height="28" src="https://img.icons8.com/fluency/48/egypt-circular.png" alt="egypt-circular"/>
+                                <span>عربي</span>
+                            </button>
+                        </div>
+                    </div>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="./insta.html">Instagram Downloader</a>
+                        <a class="nav-link" data-translate="nav-insta" href="./insta.html">Instagram Downloader</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./youtube.html">YouTube Downloader</a>
+                        <a class="nav-link" data-translate="nav-you" href="./youtube.html">YouTube Downloader</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./twitter.html">Twitter Downloader</a>
+                        <a class="nav-link" data-translate="nav-twit" href="./twitter.html">Twitter Downloader</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-translate="nav-home" href="../">Home</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-        <!--make input field for the Facebook video link-->
-            <header>
-                <h2 class="face animate__animated animate__bounceInLeft" onclick="location.reload()" style="color: #0644e0">Facebook Downloader</h2></button> <br> 
-                <h3>Convert and download</h3>
-                <h4>any <span class="face"> Facebook </span> video in MP4, MP3 and opus</ح>
-            </header>
-            
-            <div id="main">
-                <div id="flip-container">
-                    <input type="text" id="url" class="linkOfVideo" name="text" placeholder="Past a video URL" autocomplete="off"><br>
-                    <button id="short" type="submit" value="Send" class="download face-btn" >Download <i class="fa-solid fa-circle-down"></i></button>
-                    <button id="delete" class="remove bg-danger">
-                        <span class="text">Delete</span><span class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path>
-                            </svg>
-                        </span>
-                    </button>
-                </div>
-            </div>
+    <!--make input field for the Facebook video link-->
+    <header>
+        <img class="animate__animated animate__backInLeft" src="../logo/facebook-video-downloader.png.webp" onclick="location.reload()" style="cursor: pointer;" width="200px" alt="">
+        <div class="d-flex align-items-baseline justify-content-center gap-1" style="color: #0644e0">
+            <h2 data-translate="tube-title">Convert and download</h2>
+            <h2><i class="fa-regular fa-circle-down"></i></h2>
+        </div>
+        <h4 data-translate="face-title2">any Facebook video in MP4, MP3 and opus</h4>
+    </header>
+    
+    <!-- From Body -->
+    <div id="main">
+        <div id="flip-container">
 
-            <!-- Error Massage -->
-            <h5 id="error-message"></h5>
+            <form class="form">
+                <i id="input-icon" class="fa-solid fa-link"></i>
+                <input type="url" class="input linkOfVideo" placeholder="Past a video URL" required="" autocomplete="off">
+                <button id="delete" class="reset" type="reset" title="Reset Form">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </form>
 
-            <div class="wrapper" id="loader">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="shadow"></div>
-                <div class="shadow"></div>
-                <div class="shadow"></div>
+            <div class="btn-vid">
+                <a href="#vedio">
+                    <div id="short" class="download face-btn">
+                        <button class="install-btn" data-translate="tube-btn">Download </button>
+                        <i class="fa-solid fa-circle-down"></i>
+                    </div>
+                </a>
             </div>
+        </div>
+    </div>
+    <!-- Error Massage -->
+    <h5 id="error-message"></h5>
+
+    <!-- Loader -->
+    <div class="wrapper" id="loader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+    </div>
+
+
+    <!-- Video Body -->
+    <div class="LinksDad" id="vedio">
         
-        
-            <div class="LinksDad">
-                
-            </div>
+    </div>
 
+
+
+    <!-- js Script -->
     <script src="../js/face.js"></script>
+    <script src="../js/lang.js"></script>
+    <!-- FontAwesome Icons -->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- Bootstrap js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Animation js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
