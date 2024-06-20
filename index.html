@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.css">
     <!-- Icon  -->
-    <link rel="shortcut icon" href="./logo/MAG_big-png.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./logo/icon.png" type="image/x-icon">
+    <!-- Manifest -->
+    <link rel="manifest" href="manifest.json">
     <!-- Animation css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -16,17 +19,24 @@
     <!-- Style css -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/page.css">
+    <!-- IOS Support -->
+    <link rel="apple-touch-icon" href="images/icons/icon-72x72.png">
+    <link rel="apple-touch-icon" href="images/icons/icon-96x96.png">
+    <link rel="apple-touch-icon" href="images/icons/icon-128x128.png">
+    <link rel="apple-touch-icon" href="images/icons/icon-144x144.png">
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+    <link rel="apple-touch-icon" href="images/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" href="images/icons/icon-512x512.png">
     <!-- Title -->
-    <title>MAG</title>
+    <title>MAG Downloader</title>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
-            <!-- <a class="navbar-brand" href="#" onclick="location.reload()"> < MAG /> </a> -->
             <!-- Navbar Brand -->
-            <img src="./logo/MAG_big-png.png" alt="" onclick="location.reload()" style="width: 9em;">
-            <button class="navbar-toggler" style="border: 0; color: transparent;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="./logo/logo.png" alt="" onclick="location.reload()" style="width: 10em; margin-right: 10px;">
+            <button class="navbar-toggler" style="border: 0; color: transparent;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown11" aria-controls="navbarNavDropdown11" aria-expanded="false" aria-label="Toggle navigation">
                 <label class="hamburger">
                     <input type="checkbox">
                     <svg viewBox="0 0 32 32">
@@ -35,34 +45,66 @@
                     </svg>
                 </label>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown" style="direction: rtl; text-align: end;">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown11" >
+                <ul class="navbar-nav" id="index-nav">
+
+                    <div>
+                        <div class="dropdown-list" >
+                            <button id="englishText" class="language-button" onclick="changeLanguage('en')">
+                                <img width="28" height="28" src="https://img.icons8.com/color/48/great-britain-circular.png" alt="great-britain-circular"/>
+                                <span>EN</span>
+                            </button>
+                        </div>
+
+                        <div class="dropdown-list" >
+                            <button id="arabicText" class="language-button" onclick="changeLanguage('ar')">
+                                <img width="28" height="28" src="https://img.icons8.com/fluency/48/egypt-circular.png" alt="egypt-circular"/>
+                                <span>عربي</span>
+                            </button>
+                        </div>
+                    </div>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="./page/twitter.html">Twitter Downloader</a>
+                        <a class="nav-link" data-translate="nav-twit" href="./page/twitter.html">Twitter Downloader</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./page/insta.html">Instagram Downloader</a>
+                        <a class="nav-link" data-translate="nav-insta" href="./page/insta.html">Instagram Downloader</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./page/face.html">Facebook Downloader</a>
+                        <a class="nav-link" data-translate="nav-face" href="./page/face.html">Facebook Downloader</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./page/youtube.html">YouTube Downloader</a>
+                        <a class="nav-link" data-translate="nav-you" href="./page/youtube.html">YouTube Downloader</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+
     <!-- Title of Page -->
     <section class="title" style="text-align: center;">
         <div class="container">
             <div class="img">
-                <img class="animate__animated animate__backInLeft" src="./logo/MAG_big-png.png" alt="" style="width: 11em; margin-top: 9em;" >
-            </div> <br>
-            <div class="animate__animated animate__headShake" style="margin-bottom: 14em;">
+                <img class="animate__animated animate__backInLeft" src="./logo/logo2.png" alt="" style="width: 18em; margin-top: 9em;" >
+            </div> 
+            <div class="animate__animated animate__headShake" style="margin-bottom: 9em;">
                 <h2 style="color: #22226a; font-family: lemonada;">Media Downloader</h2>
-                <p>Fast and free all in one video downloader <br> By <span style="font-size: 17px; font-weight: 600; color: #22226a;">URL <i class="fa-solid fa-link"></i></span></p>
+                <br>
+                <p class="mb-0" data-translate="home-title">Website works in two languages, Arabic and English</p>
+                <p class="mb-0" data-translate="home-title1">Fast and free all in one video downloader</p>
+                <div class="d-flex align-items-baseline justify-content-center gap-1">
+                    <p data-translate="home-title2">By</p>
+                    <span data-translate="home-title3" style="font-size: 17px; font-weight: 600; color: #22226a;">URL </span>
+                    <i class="fa-solid fa-link"></i>
+                </div>
+                <!-- <br> -->
+                
+                <div style="display: none;" id="install">
+                    <button class="install-btn" data-translate="home-btn">Install App &nbsp; </button>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+
             </div>
             <!-- Scroll Down Button -->
             <a href="#page" class="scroll-down">
@@ -76,52 +118,51 @@
         </div>
     </section>
 
-
     <!-- Downloader Cards -->
     <section class="py-20">
         <div class="container">
             <div class="max-w-3xl mx-auto mb-16 text-center ">
-                <h2 class="mt-8 mb-10">Supports The Most Popular Sources</h2>
-                <p class="lead text-muted">You can check regularly updated supported sources list.</p>
+                <h2 class="mt-8 mb-10" style="color: #000961;" data-translate="sec2-title1">Supports The Most Popular Sources</h2>
+                <p class="lead text-muted" data-translate="sec2-title2">You can check regularly updated supported sources list</p>
             </div>
             <br><br>
-            <div class="row justify-content-center" data-aos="zoom-in">
+            <div class="row justify-content-center">
                 <!-- Youtube Card -->
-                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 p-3"  >
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 p-3"  data-aos="zoom-in" data-aos-offset="100">
                     <div class="bg-light rounded py-4 text-center" id="card">
                         <a href="./page/youtube.html" class="text-decoration-none text-dark">
                             <img class="d-block mx-auto lazy" style="margin-bottom: .7em; width: 4em; height: 4em;"  src="./logo/youtube1.webp" alt="YouTube video downloader" title="YouTube">
-                            <span style="font-size: 20px; font-family: 'elmessiri-bold';">YouTube</span>
+                            <span style="font-size: 20px; font-family: 'elmessiri-bold';" data-translate="sec2-btn1">YouTube</span>
                         </a>
                     </div>
                 </div>
 
                 <!-- Facebook Card -->
-                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 p-3" >
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 p-3" data-aos="zoom-in" data-aos-offset="200">
                     <div class="bg-light rounded py-4 text-center" id="card">
                         <a href="./page/face.html" class="text-decoration-none text-dark">
                             <img class="d-block mx-auto lazy" style="margin-bottom: .7em; width: 4em; height: 4em; border-radius: 10px;"  src="./logo/face.webp" alt="Facebook video downloader" title="Facebook">
-                            <span style="font-size: 20px; font-family: 'elmessiri-bold';">Facebook</span>
+                            <span style="font-size: 20px; font-family: 'elmessiri-bold';" data-translate="sec2-btn2">Facebook</span>
                         </a>
                     </div>
                 </div>
 
                 <!-- Instagram Card -->
-                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 p-3" >
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 p-3" data-aos="zoom-in" data-aos-offset="300">
                     <div class="bg-light rounded py-4 text-center" id="card">
                         <a href="./page/insta.html" class="text-decoration-none text-dark">
                             <img class="d-block mx-auto lazy" style="margin-bottom: .7em; width: 4em; height: 4em; border-radius: 10px;"  src="./logo/insta.png" alt="Instagram video downloader" title="Instagram">
-                            <span style="font-size: 20px; font-family: 'elmessiri-bold';">Instagram</span>
+                            <span style="font-size: 20px; font-family: 'elmessiri-bold';" data-translate="sec2-btn3">Instagram</span>
                         </a>
                     </div>
                 </div>
 
                 <!-- Twitter Card -->
-                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 p-3" >
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 p-3" data-aos="zoom-in" data-aos-offset="400">
                     <div class="bg-light rounded py-4 text-center" id="card">
                         <a href="./page/twitter.html" class="text-decoration-none text-dark">
                             <img class="d-block mx-auto lazy" style="margin-bottom: .7em; width: 4em; height: 4em; border-radius: 10px;" src="./logo/twitter1.png" alt="Twitter video downloader" title="Twitter">
-                            <span style="font-size: 20px; font-family: 'elmessiri-bold';">Twitter</span>
+                            <span style="font-size: 20px; font-family: 'elmessiri-bold';" data-translate="sec2-btn4">Twitter</span>
                         </a>
                     </div>
                 </div>
@@ -129,58 +170,61 @@
         </div>
     </section>
 
-
     <!-- Section Card -->
     <section style="padding: 5em 0;" id="page">
         <div class="container">
             <div class="max-w-3xl mx-auto mb-16 text-center ">
-                <h2 class="mt-8 mb-10">How to download videos ?</h2>
-                <p class="lead text-muted">To download videos, you have to follow three easy steps :</p>
+                <h2 class="mt-8 mb-10" style="color: #000961;" data-translate="sec3-title1">How to Download Videos?</h2>
+                <p class="lead text-muted" data-translate="sec3-title2">To download videos, you have to follow three easy steps:</p>
             </div>
             <br> <br>    
             
-            <div class="islamic-card" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine">
+            <div class="islamic-card"  data-aos-easing="ease-in-sine">
                     <!-- Copy Card -->
-                    <div class="cards akeda mb-5">
+                    <div class="cards akeda mb-5" data-aos="zoom-in" data-aos-offset="100">
                             <img class="cards-img mb-3" alt="" src="./logo/copy-url.webp">
                             <div class="desc" style="width: 15em; text-align: center;">
-                                <h5>
-                                <div class="why-title ">
-                                    <span class="flex-shrink-0 align-items-center justify-content-center rounded-circle" style="width: 36px; height: 36px; display: inline-flex; background: #fafafa;">1</span>
-                                    Copy Link
+
+                                <div class="why-title d-flex align-items-baseline justify-content-center gap-1">
+                                    <span data-translate="sec3-num1" class="flex-shrink-0 align-items-center justify-content-center rounded-circle" style="width: 36px; height: 36px; display: inline-flex; background: #F5793B; color: #fff;">1</span>
+                                    <h5 data-translate="sec3-title3" style="color: #000961;">Copy Link</h5>
                                 </div>
-                                </h5>
-                                <p>Just copy link of source which you want to download.</p>
+                                <p data-translate="sec3-title4">Just copy link of source which you want to download</p>
+
                             </div>
                     </div>    
                     <!-- Past card -->
-                    <div class="cards feka mb-5" >
+                    <div class="cards feka mb-5" data-aos="zoom-in" data-aos-offset="200">
                             <img class="cards-img mb-3" alt="" src="./logo/choose-format.webp">
                             <div class="desc" style="width: 15em; text-align: center;">
-                                <h5>
-                                <div class="why-title">
-                                    <span class="flex-shrink-0 align-items-center justify-content-center rounded-circle" style="width: 36px; height: 36px; display: inline-flex; background: #fafafa;">2</span>
-                                    Paste Link
+                                
+                                <div class="why-title d-flex align-items-baseline justify-content-center gap-1">
+                                    <span data-translate="sec3-num2" class="flex-shrink-0 align-items-center justify-content-center rounded-circle" style="width: 36px; height: 36px; display: inline-flex; background: #F5793B; color: #fff;">2</span>
+                                    <h5 data-translate="sec3-title5" style="color: #000961;">Paste Link</h5>
                                 </div>
-                                </h5>
-                                <p>Paste a video link of supported sources into the input field above.</p>
+                                <p data-translate="sec3-title6">Paste a video link of supported sources into the input field above</p>
+
                             </div>
                     </div>    
                     <!-- Download card -->
-                    <div class="cards sera mb-5" >
+                    <div class="cards sera mb-5" data-aos="zoom-in" data-aos-offset="300">
                             <img class="cards-img mb-3" alt="" src="./logo/get-file.webp">
                             <div class="desc" style="width: 15em; text-align: center;">
-                                <h5>
-                                <div class="why-title">
-                                    <span class="flex-shrink-0 align-items-center justify-content-center rounded-circle" style="width: 36px; height: 36px; display: inline-flex; background: #fafafa;">3</span>
-                                    Download Now!
+                                
+                                <div class="why-title d-flex align-items-baseline justify-content-center gap-1">
+                                    <span data-translate="sec3-num3" class="flex-shrink-0 align-items-center justify-content-center rounded-circle" style="width: 36px; height: 36px; display: inline-flex; background: #F5793B; color: #fff;">3</span>
+                                    <h5 data-translate="sec3-title7" style="color: #000961;">Download Now</h5>
                                 </div>
-                                </h5>
-                                <p>Click to download button and see files which is available to download.</p>
+                                <p data-translate="sec3-title8">Click to download button and see files which is available to download</p>
                             </div>
                     </div>    
             </div>
-            <a href="https://drive.google.com/file/d/1kkClSdZOneuLggoSFdWy-sa3chxwqZYF/view?usp=sharing" target="_blank" style="display: flex; justify-content: space-around; text-decoration: none;"><button style="padding: 10px;" type="button" class="btn btn-success">Download QR <i class="fa-solid fa-qrcode"></i></button></a>
+            <a href="logo/qr-code (12).png" download target="_blank" style="display: flex; justify-content: space-around; text-decoration: none;">
+                <div class="btn btn-success qr-btn">
+                    <button type="button" class="install-btn" data-translate="sec3-title9">Download QR &nbsp; </button>
+                    <i class="fa-solid fa-qrcode"></i>
+                </div>
+            </a>
         </div>
     </section>
 
@@ -194,13 +238,25 @@
                 <a target="_blank" style="background-color: #333333; color: #fff;" href="https://github.com/Mohamed20a"><i class="fa-brands fa-github"></i></a>
                 <a target="_blank" style="background-color: #0e40bd; color: #fff;" href="https://www.facebook.com/profile.php?id=100006434713527"><i class="fa-brands fa-facebook-f"></i></a>
             </div>
-            <a href="https://portfolioo-1.netlify.app/" target="_blank" style="text-decoration: none;"> <p class="copyright"> Mohamed Ahmed Elgeady ❤</p> </a>
+            <p class="text-center">
+                <a href="https://mohammed-ahmed.netlify.app/" class="copyright" target="_blank" style="text-decoration: none;"> Mohamed Ahmed Elgeady ❤ </a>
+            </p>
         </footer>
     </div>
 
-    <!-- Bootstrap css -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <!-- Fontawesome Icons -->
+    <!-- Scroll Section -->
+    <div class="scrollBtn active" href="#" >
+        <i class="fas fa-angle-double-up" aria-hidden="true"></i>
+    </div>
+
+
+
+    <!-- js Script -->
+    <script src="js/script.js"></script>
+    <script src="js/lang.js"></script>
+    <!-- Bootstrap js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- FontAwesome Icons -->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
