@@ -1,45 +1,9 @@
 // Language Translate
-let currentLanguage = localStorage.getItem('language') || "en";
-let currentDirection = (localStorage.getItem('direction') && currentLanguage === 'ar') ? 'rtl' : 'ltr'; 
-
-function changeLanguage(lang) {
-    
-    currentLanguage = lang;
-    localStorage.setItem('language', currentLanguage);
-
-    currentDirection = (currentLanguage === 'ar') ? 'rtl' : 'ltr';
-    localStorage.setItem('direction', currentDirection);
-
-    document.documentElement.dir = currentDirection;
-    updatePageLanguage();
-}
-
-function updatePageLanguage() {
-    const elements = document.querySelectorAll('[data-translate]');
-    elements.forEach(element => {
-        const key = element.getAttribute('data-translate');
-        if (translations[currentLanguage][key]) {
-            element.textContent = translations[currentLanguage][key];
-        }
-    });
-
-    const englishButton = document.getElementById('englishText');
-    const arabicButton = document.getElementById('arabicText');
-    
-    if (currentLanguage === 'en') {
-        englishButton.style.display = 'none'; 
-        arabicButton.style.display = 'block'; 
-    } else if (currentLanguage === 'ar') {
-        englishButton.style.display = 'block'; 
-        arabicButton.style.display = 'none'; 
-    }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    document.documentElement.dir = currentDirection;
-    updatePageLanguage();
-});
-
+function _0x40a5(){const _0x28bba0=['[data-translate]','forEach','englishText','arabicText','direction','DOMContentLoaded','getElementById','8708271DrVmYw','querySelectorAll','language','setItem','display','91751hIgqCE','rtl','style','8MrngfT','9JQOAbe','991389PNLHhB','12hpahDM','865960SpQsic','documentElement','getItem','dir','ltr','block','data-translate','613323fqVTaR','2UvQBGV','getAttribute','none','textContent','1358884vAkNlP','4978670jrDDMe'];
+                   const _0x56e1c3=_0x4e97;(function(_0x4608a9,_0x44c443){const _0x9e144d=_0x4e97,_0x708966=_0x4608a9(){try{const _0x4467d3=parseInt(_0x9e144d(0xa8))/0x1+parseInt(_0x9e144d(0x96))/0x2*(-parseInt(_0x9e144d(0x95))/0x3)
+                       +-parseInt(_0x9e144d(0x9a))/0x4+parseInt(_0x9e144d(0xaf))/0x5*(-parseInt(_0x9e144d(0xae))/0x6)+parseInt
+                       (_0x9e144d(0xad))/0x7*(-parseInt(_0x9e144d(0xab))/0x8)+parseInt(_0x9e144d(0xac))/0x9*(parseInt(_0x9e144d(0x9b))/0xa)+parseInt(_0x9e144d(0xa3))/0xb;
+            if(_0x4467d3===_0x44c443)break;else _0x708966['push'](_0x708966['shift']());}catch(_0x441e6c){_0x708966['push'](_0x708966['shift']());}}}(_0x40a5,0x553b2));currentDirection=localStorage[_0x56e1c3(0x90)](_0x56e1c3(0xa0))&&currentLanguage==='ar'?_0x56e1c3(0xa9):_0x56e1c3(0x92);function changeLanguage(_0x159f64){const _0x595a92=_0x56e1c3;currentLanguage=_0x159f64,localStorage(_0x595a92(0xa5),currentLanguage),currentDirection=currentLanguage==='ar'?_0x595a92(0xa9):_0x595a92(0x92),localStorage[_0x595a92(0xa6)](_0x595a92(0xa0),currentDirection),document[_0x595a92(0x8f)][_0x595a92(0x91)]=currentDirection,updatePageLanguage();}function updatePageLanguage(){const _0x506547=_0x56e1c3,_0x6f5686=document[_0x506547(0xa4)](_0x506547(0x9c));_0x6f5686[_0x506547(0x9d)](_0x226495=>{const _0x19a863=_0x506547,_0x18d289=_0x226495[_0x19a863(0x97)](_0x19a863(0x94));translations[currentLanguage][_0x18d289]&&(_0x226495[_0x19a863(0x99)]=translations[currentLanguage][_0x18d289]);const _0x4d5548=document[_0x506547(0xa2)](_0x506547(0x9e)),_0x1d8a00=document[_0x506547(0xa2)](_0x506547(0x9f));[_0x506547(0xaa)]['display']=_0x506547(0x98),_0x1d8a00[_0x506547(0xaa)][_0x506547(0xa7)]=_0x506547(0x93);else currentLanguage==='ar'&&(_0x4d5548[_0x506547(0xaa)][_0x506547(0xa7)]='block',_0x1d8a00[_0x506547(0xaa)][_0x506547(0xa7)]=_0x506547(0x98));}function _0x4e97(_0x438013,_0x4d09e4){const _0x40a589=_0x40a5();return _0x4e97=function(_0x4e97ed,_0x341b60){_0x4e97ed=_0x4e97ed-0x8f;let _0x23c3ce=_0x40a589[_0x4e97ed];return _0x23c3ce;},_0x4e97(_0x438013,_0x4d09e4);}document['addEventListener'](_0x56e1c3(0xa1),()=>{const _0x1bf0f4=_0x56e1c3;document['documentElement'][_0x1bf0f4(0x91)]=currentDirection,updatePageLanguage();});
 
 
 // English Language
