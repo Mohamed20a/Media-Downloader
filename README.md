@@ -1,6 +1,6 @@
 # MAG Downloader
 
-<img align="center" width="80%" src="https://github.com/Mohamed20a/My-Portfolio/blob/main/assets/img/portfolio/down.png">
+<img align="center" width="80%" src="https://github.com/Mohamed20a/Media-Downloader/blob/main/logo/down.png">
 
 ## What is MAG Downloader?
  Media Downloader
